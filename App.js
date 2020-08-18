@@ -38,7 +38,10 @@ export default function App() {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+
+    // TODO: swipeable gestures did not work with TouchableWithoutFeedback
+    // but this is needed for users without the icon menu to escape the keyboard input
+    // <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Header />
         <View style={styles.content}>
@@ -55,7 +58,7 @@ export default function App() {
           </View>
         </View>
       </View>
-    </TouchableWithoutFeedback>
+    // </TouchableWithoutFeedback>
   );
 }
 
